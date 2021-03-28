@@ -1,8 +1,10 @@
 pipeline {
     agent any
-
+    trigger{
+        gitpush()
+    }
     stages {
-        stage('Hello') {
+        stage('Hello 123') {
             steps {
                sh 'python3 test_python_code.py'
             }
