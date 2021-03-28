@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    trigger{
-        gitpush()
-    }
     stages {
         stage('Hello 123') {
             steps {
