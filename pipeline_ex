@@ -2,9 +2,32 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello mahesh') {
+        stage('Build Code') {
             steps {
-                echo 'Hello World'
+                echo 'The code will build here '
+                sh'''
+                pwd
+                ls
+                mkdir build code
+                '''
+            }
+        }
+        
+        stage('test stage') {
+            steps {
+       
+                echo 'This should be ready. I should test it now.'
+                bat '''
+                dir
+                echo "This is the bat shell"
+                '''
+                }
+            }
+        }
+        
+         stage('acceptance test stage') {
+            steps {
+                echo 'acceptance test'
             }
         }
     }
