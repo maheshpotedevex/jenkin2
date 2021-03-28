@@ -23,7 +23,7 @@ pipeline {
                 '''
                 }
             }
-        }
+        
         
          stage('acceptance test stage') {
             steps {
@@ -32,3 +32,4 @@ pipeline {
         }
     }
 }
+
